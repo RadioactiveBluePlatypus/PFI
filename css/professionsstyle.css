@@ -1,0 +1,15 @@
+.table>div{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    
+}
+
+.table > div > div{
+    outline: 1px solid black;
+    padding: 2px;
+}
+
+.table > div:nth-child(odd)
+{
+    background-color: lightgray;
+}
