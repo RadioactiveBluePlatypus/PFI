@@ -78,7 +78,7 @@ main > *{
     padding: 10px;  
 }
 
-main > div{
+main > div:not(.gallery, #table, .proftable){
     display: grid;
     grid-template-columns: min-content auto;
 }
@@ -179,4 +179,78 @@ ul > li > ul{
     height: 150px;
     width: 150px;
     border-radius: 50%;
+    
+}
+
+div.gallery{
+    border: 1px solid black;
+    float: left;
+    width: 200px;
+    margin: 4px;
+}
+  
+div.description{
+    text-align: center;
+}
+
+div.gallery img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+#table > div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+}
+
+#table div{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#table > :nth-child(1){
+    background-color: lightgray;
+}
+
+#table > :nth-child(n+2){
+    height: 75px;
+}
+
+#table > :nth-child(n+2) > * > :nth-child(1){
+    font-weight: bold;
+}
+
+#table p{
+    margin: 0px;
+}
+
+#table .litterature{
+    background-color: rgb(187, 242, 223);
+}
+
+#table .badminton{
+    background-color: rgb(242, 167, 167);
+}
+
+#table .web{
+    background-color: rgb(158, 218, 255);
+}
+
+.proftable>div{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    
+}
+
+.proftable > div > div{
+    outline: 1px solid black;
+    padding: 2px;
+}
+
+.proftable > div:nth-child(odd)
+{
+    background-color: lightgray;
 }
